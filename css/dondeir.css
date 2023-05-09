@@ -1,0 +1,101 @@
+#imagenes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poltawski Nowy', serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/*NavBar*/
+
+a {
+    text-decoration: none;
+    color: rgb(10, 10, 10)
+}
+
+/*agregar hover
+a:hover {
+
+  }
+*/
+ul {
+    list-style: none;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: rgb(7, 5, 5);
+    background-color: silver;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li{
+    margin: 0 30px;
+    height: auto;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    background-color: silver;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+/*Galeria de imagens*/
+section{
+    display: flex;
+    width: 1800px;
+    height: 800px;
+  }
+  section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+  }
+  section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+  }
+
+body{
+    background-color: black;
+}
