@@ -1,4 +1,5 @@
 
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -102,11 +103,10 @@ header {
 .lugares-container{
 
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /*background: rgb(214, 214, 214);*/
+    background: rgb(214, 214, 214);
     width: 100vw;
     height: 100%;
     padding-top: 50px;
@@ -128,95 +128,138 @@ header {
 
 .title-lug h2 {
     font-size: 5vmin;
-    margin-top: 50px;
+    margin-top: 25px;
+    margin-bottom: 20px;
 }
 
-.galeria-lug{
+
+.slide-container {
     position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-top: 40px;
-    width: 90%;
-    overflow-x: auto;
+    width: 80%;
+    height: 450px;
+    border: 3px solid #ede6de;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
 }
 
-.galeria-lug .slider {
-    display: flex;
+.slide-container .slides {
+    width: 100%;
+    height: calc(100% - 40px);
+    position: relative;
     overflow: hidden;
-    scroll-behavior: smooth;
 }
 
-.galeria-lug .tarj--lug{
-    display: flex;
+.slide-container .slides img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
 }
 
-.tarj--lug{
-    display: flex;
-    flex-direction: column;
-    color: aliceblue;
+.name h3, .name h4 {
+    position: absolute;
+    z-index: 1;
+    background-color: #020202c2;
     text-align: center;
+    width: 100%;
+    color: #ede6de;
 }
 
-.tarj--lug h3{
-    position: relative;
-    background: rgba(0, 0, 0, 0.835);
-    text-align: center;
-    top: -306px;
+.slides h4{
+    top: 95%;
 }
 
-.tarj--lug h4{
-    position: relative;
-    background: rgba(0, 0, 0, 0.835);
-    top: -50px;
+.slide-container .slides img:not(.active){
+    top: 0;
+    left: -100%;
 }
 
-.tarj--lug a{
-    position: relative;
-    background: rgb(8, 174, 220);
-    padding: 5px;
-    border-radius: 10px;
-    top: -40px;
-}
-
-.tarj--lug img{
-    width: 450px;
-    height: 300px;
-}
-
-.galeria-lug .prev {
+span.next, span.prev {
     position: absolute;
-    left: 19px;
-    top: 43%;
-    transform: translate(-50%, -50%);
-}
-
-.galeria-lug .next {
-    position: absolute;
-    right: -10px;
-    transform: translate(-50%, -50%);
-    top: 43%;
-}
-
-.prev img, .next img {
-    width: 25px;
-    margin: 10px;
-    padding: 3px;
-}
-
-.galeria-lug .prev, .galeria-lug .next {
-    width: 30px;
-    height: 35px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: #020202;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.867);
-    border-radius: 8px;
+    z-index: 1;
 }
 
+span.next{
+    right: 20px;
+}
+
+span.prev{
+    left: 20px;
+}
+
+span.prev:hover, span.next:hover{
+    background-color: #ede6ded3;
+    opacity: 0.8;
+    color: #222;
+}
+
+/* Indicador container */
+
+.indicador-container{
+    position: absolute;
+    display: flex;
+    bottom: 11px;
+    z-index: 3;
+    left: 50%;
+    transform: transLateX(-50%);
+}
+
+.indicador {
+    width: 15px;
+    height: 15px;
+    margin: 0px 2px;
+    border: 3px solid #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: backgraund-color 0.6s ease;
+}
+
+.indicador-container .active {
+    background-color: #020202;
+}
+
+@keyframes next1{
+    from{
+        left: 0%;
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes next2{
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0%;
+    }
+}
+
+@keyframes prev1{
+    from{
+        left: 0%;
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes prev2{
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0%;
+    }
+}
 /*Section Excursiones*/
 
 .excursiones{
@@ -259,12 +302,12 @@ header {
 .tours{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
+    background: rgb(214, 214, 214);
 
 }
 
@@ -281,26 +324,58 @@ header {
 .tours-text p{
     padding-bottom: 20px;
 }
-
-.tours-text .btn {
-    margin-top: 40px;
-    background: rgb(8, 174, 220);
-    border-radius: 10px;
-    padding: 5px;
-    text-align: center;
-}
-
 .image-tours{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     padding-top: 20px;
     gap: 5px;
 }
 
+.tarj-tour {
+    width: 320px;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
+}
 .image-tours img{
     max-width: 100%;
-    height: 145px;
+    height: 319px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.tarj-tour h3{
+    position: relative;
+    bottom: 5px;
+    border-radius: 0 0 15px 15px;
+    background-color: #020202da;
+    color: #ede6de;
+    z-index: 1;
+    text-align: center;
+
+}
+
+.redirect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.redirect h1{
+    padding-top: 25px;
+    text-align: center;
+}
+
+.redirect .btn{
+    margin-top: 20px;
+    background: rgb(8, 174, 220);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
 }
 
 /*agregar efecto en imagéns, hover, etc.*/
@@ -343,6 +418,18 @@ header {
         border-radius: 6px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
