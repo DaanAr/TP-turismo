@@ -38,60 +38,31 @@
             <div class="line"></div>
             <h2>Recorré los maravillosos destinos de nuestro país</h2>
         </div>
-        <div class="galeria-lug">
-            <button href="" class="prev"><img src="Icons/flechas-izquierda.png" alt=""></button>
-
-            <div class="slider">
-                <div class="tarj--lug">
-                    <img src="Images/mardelplata.jpg" alt="Buenos Aires, Mar del plata">
-                    <h3>Buenos Aires</h4>
-                    <h4>Mar del plata</h4>
-                    <a href="">Ver más</a>
-                </div>
-                <div class="tarj--lug">
-                    <img src="Images/sanmartin.jpg" alt="Neuquén, San Martin de los andes">
-                    <h3>Neuquén</h4>
-                    <h4>San Martin de los andes</h4>
-                    <a href="">Ver más</a>
-                </div>
-                <div class="tarj--lug">
-                    <img src="Images/SantaCruz.jpg" alt="Santa Cruz">
-                    <h3>Santa Cruz</h4>
-                    <h4>Glaciar perito moreno</h4>
-                    <a href="">Ver más</a>
-                </div>
-                <div class="tarj--lug">
-                    <img src="Images/salta.jpg" alt="Salta, Cafayate">
-                    <h3>Salta</h4>
-                    <h4>Cafayate</h4>
-                    <a href="">Ver más</a>
-                </div>
-                <div class="tarj--lug">
-                    <img src="Images/mendoza.jpg" alt="Mendoza, San Rafael">
-                    <h3>Mendoza</h4>
-                    <h4>San Rafael</h4>
-                    <a href="">Ver más</a>
-                </div>
-                <div class="tarj--lug">
-                    <img src="Images/jujuy.jpg" alt="Jujuy">
-                    <h3>Jujuy</h4>
-                    <h4>San salvador</h4>
-                    <a href="">Ver más</a>
-                </div>
-                <div class="tarj--lug">
-                    <img src="Images/misionescataratas.jpg" alt="Misiones, Puerto Iguazú">
-                    <h3>Misiones</h4>
-                    <h4>Puerto Iguazú</h4>
-                    <a href="">Ver más</a>
-                </div>
-                <div class="tarj--lug">
-                    <img src="Images/tierradelfuego.jpg" alt="Tierra del fuego">
-                    <h3>Tierra del fuego</h4>
-                    <h4>Ushuaia</h4>
-                    <a href="">Ver más</a>
-                </div>
+        <div class="slide-container">
+            <div class="slides">
+                <img src="Images/mardelplata.jpg" alt="Buenos Aires, Mar del plata" class="active" id="images" >
+                <img src="Images/sanmartin.jpg" alt="Neuquén, San Martin de los andes"  id="images">
+                <img src="Images/SantaCruz.jpg" alt="Santa Cruz"  id="images">
+                <img src="Images/salta.jpg" alt="Salta, Cafayate"  id="images">
+                <img src="Images/mendoza.jpg" alt="Mendoza, San Rafael"  id="images">
+                <img src="Images/jujuy.jpg" alt="Jujuy"  id="images">
+                <img src="Images/misionescataratas.jpg" alt="Misiones, Puerto Iguazú"  id="images">
+                <img src="Images/tierradelfuego.jpg" alt="Tierra del fuego"  id="images">
             </div>
-            <button href="" class="next"><img src="Icons/flechas-derecha.png" alt=""></button> 
+            <div class="buttons">
+                <span class="next">&#10095;</span>
+                <span class="prev">&#10094;</span>
+            </div>
+            <div class="indicador-container">
+                <div class="indicador active" attr="0"></div>
+                <div class="indicador" attr="1"></div>
+                <div class="indicador" attr="2"></div>
+                <div class="indicador" attr="3"></div>
+                <div class="indicador" attr="4"></div>
+                <div class="indicador" attr="5"></div>
+                <div class="indicador" attr="6"></div>
+                <div class="indicador" attr="7"></div>
+            </div>
         </div>
     </section>
 <!-- Section Excursiones -->
@@ -99,22 +70,41 @@
         <div class="excursiones-content">
             <h1>DESCUBRE TODO LO QUE PUEDES HACER EN TU DESTINO</h1>
             <div class="line"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime autem nobis quo laboriosam enim sed repellendus ex, minus totam earum molestiae repudiandae explicabo, quod cum, quia eos rerum quas quasi.</p>
+            <p>Cada destino posee aventuras inigualables. ¡Conoce todas las opciones que hay! Apúnta a la que más se adapte a tu personalidad y hace de ellas una experiencia inolvidable.</p>
         </div>
     </section>
+<!--Tours-->
     <section class="tours">
         <div class="tours-text">
                 <h1>Explorá, conocé y viví experiencias únicas</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, distinctio dolor aliquid fugit tenetur unde id facere quos! Perferendis excepturi iste aliquam accusantium quod et esse laudantium praesentium non nostrum.</p>
-                <a href="#" class="btn">Leer más</a>
+                <p>No importa si sos team playa, río, lago, montaña, invierno o verano. En Argentina existen miles de posibilidades únicas en cualquier época, para todos los gustos. Anímate a conocer, animate a crear historias para contar.</p>
         </div>
         <div class="image-tours">
-                    <img src="./Images/canopy-sanma.jpg" alt="">
-                    <img src="./Images/excursion-cafayate.jpg" alt="">
-                    <img src="./Images/excursion-misiones.jpg" alt="">
-                    <img src="./Images/jujuy-excursiones.jpg" alt="">
+            <div class="tarj-tour">
+                <img src="./Images/canopy-sanma.jpg" alt="">
+                <h3>Canopy en San Martin de los andes</h3>
+            </div>
+            <div class="tarj-tour">
+                <img src="./Images/excursion-cafayate.jpg" alt="">
+                <h3>Caminata por Cafayate</h3>
+            </div>
+            <div class="tarj-tour">
+                <img src="./Images/excursion-misiones.jpg" alt="">
+                <h3>Las cataratas desde adentro</h3>
+            </div>
+            <div class="tarj-tour">
+                <img src="./Images/jujuy-excursiones.jpg" alt="">
+                <h3>Excursion en Bici por la quebrada</h3>
+            </div>
         </div>
-
+        <div class="redirect">
+            <h1>¡Esto y mucho más! Conoce más actividades</h1>
+            <a href="#" class="btn">Ver más</a>
+        </div>
+        <div class="redirect">
+            <h1>¡Si precisas información detallada u orientación en tu viaje, no dudes en contactarnos!</h1>
+            <a href="#" class="btn">Contáctanos aquí</a>
+        </div>
     </section>
 <script src="./js/index.js"></script>
 </body>
