@@ -6,11 +6,7 @@ a {
     color: rgb(255, 255, 255)
 }
 
-/*agregar hover
-a:hover {
 
-  }
-*/
 ul {
     list-style: none;
 }
@@ -99,7 +95,7 @@ body {
     flex-direction: column;
     justify-content: center;
 
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(44, 44, 44);
 }
 
 
@@ -189,84 +185,137 @@ form {
 }
 
 
-/*Footer*/
+/* Footer*/
 
+.footer{
+    width: 100%;
+    background: rgb(7, 7, 7);
+}
 
-#footer {
-    
+.colum{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ede6de;
+    padding: 5px;
+    text-align: center;
+}
+
+.mapa{
+    width: 100%;
+}
+
+.mapa p{
+    padding-bottom: 8px;
+}
+
+.mapa iframe{
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 0 8px 2px rgba(43, 43, 43, 0.842);
+    height: 320px;
+}
+
+.row1 {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    flex-direction: row;
+    color: #ede6ded3;
+    padding-top: 10px;
+}
+
+.sucursales{
+    width: 40%;
+    text-align: center;
+}
+
+.redes {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
     width: 100%;
-    height: 100%;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 5px #b5b5b5;
-    padding: 20px 0px;
-    background-color: #3d3d3dc8;
-    color: black;
-    align-items: center;
-   
-    
 }
 
-iframe {
-    width: 600px;
-    height: 200px;
-    box-shadow: 3px 3px 5px #b5b5b5;
-    border-radius: 20px;
-    margin: 50px;
+.footer-links ul, li{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    padding-top: 20px;
 }
 
+.list-inline-item i{
+    padding: 10px;
+}
 
-
-.sucur {
-    padding: 50px;
-    align-items: center;
+.footer-copyright{
+    width: 100%;
+    text-align: center;
+    color: #ede6de;
 }
 
 /* Responsive media
 */
 
-@media only screen and (max-width:850px) {
+@media only screen and (max-width:850px){
     .navbar {
-        padding: 0;
+        padding:0;
     }
-
     .logo {
         position: absolute;
-        top: 30px;
+        top:30px;
         left: 30px;
     }
-
     .nav-links {
         flex-direction: column;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         justify-content: center;
         /*        background:rgba(8, 174, 220, 0.652) ;*/
         margin-top: -900px;
         transition: all 0.5s ease;
     }
-
     .mobile-menu {
         margin-top: 0px;
-        /* border-bottom-right-radius: 288px; si le agregamos el backroung celeste podemos darle
+       /* border-bottom-right-radius: 288px; si le agregamos el backroung celeste podemos darle
        un estilo al borde */
     }
-
     .nav-links li {
         margin: 30px auto;
     }
-
     .menu-btn {
         display: block;
-        background: rgba(8, 174, 220, 0.686);
+        background:rgba(8, 174, 220, 0.686);
         border-radius: 6px;
     }
+}
 
+@media only screen and (max-width:700px){
+    .excursiones-content{
+        width: 70%;
+    }
+}
 
+@media only screen and (max-width:500px){
+    .excursiones-content{
+        width: 100%;
+        text-align: center;
+    }
+    .tarj-tour {
+        width: 260px;
+    }
 
+    .image-tours img {
+        height: 209px;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
