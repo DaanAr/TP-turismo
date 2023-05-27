@@ -14,3 +14,18 @@ Sobre la página "qué hacer": diseñada y programada por Jhonatan Alejandro Ova
 *Sobre la Api: Utilizamos  {JSON} Placeholder(https://jsonplaceholder.typicode.com). De esta tomamos la base de datos de unos usuarios, en especifico los datos relacionados a su nombre y su email. Con estos construimos comentario ficticios sobre la experiencia con los servicios de turismo.
 
 Sobre la página "Nosotros": diseñada y programada por Matias Alejandro Bevione, presenta características similares a modo de continuar con la temática general de la pagina respecto de la portada, barra de navegación y footer. Plantea una descripción sobre la organización en el cuerpo de la página, ofreciendo a su vez la posibilidad de un contacto a través de un formulario. El formulario cuenta con casilleros de validación de modo que deberán aportar datos válidos para su envío. 
+
+
+Integrantes:
+
+Daniela Daiana Arias
+DNI:39880939
+
+Matias Alejandro Bevione 
+DNI:34290814
+
+Ramiro Santiago Perez Zavaleta
+DNI:41331667
+
+Jhonatan Alejandro Ovando Saavedra
+DNI:94820865
