@@ -63,7 +63,7 @@ ul {
 
 /*Foto portada*/
 
-header {
+ header {
     width: 100%;
     height: 100vh;
     background-image: url(../Images/image-portada.jpg);
@@ -97,7 +97,7 @@ header {
     border-radius: 5px;
 }
 
-/*Section 1: galeria ---> A donde ir*/
+/* Section 1: galeria ---> A donde ir*/ 
 
 .lugares-container{
 
@@ -199,7 +199,7 @@ span.prev:hover, span.next:hover{
     background-color: #ede6ded3;
     opacity: 0.8;
     color: #222;
-}
+} 
 
 /* Indicador container */
 
@@ -377,7 +377,7 @@ span.prev:hover, span.next:hover{
     text-align: center;
 }
 
-/*agregar efecto en imagéns, hover, etc.*/
+/*agregar efecto en imagéns, hover, etc.
 
 /* Footer*/
 
