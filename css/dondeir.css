@@ -114,6 +114,54 @@ body{
     align-items: center;
 }
 
+/*TARJETAS DE PAQUETES*/
+.pack{
+    display: flex;
+    justify-content: space-evenly;
+}
+.tarjeta {
+    background: rgb(42,170,196);
+    background: linear-gradient(21deg, rgba(42,170,196,1) 33%, rgba(155,158,159,0.8729866946778712) 57%);
+    width: 300px;
+    padding: 40px;  
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    
+    }
+    .tarjeta img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    }
+    .tarjeta h2 {
+    color:black;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    text-align: center;
+    
+    }
+    .tarjeta p {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+    }
+    .tarjeta button {
+    background-color:forestgreen;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    }
+
 /* VIDEO Y TEXTO */
 
 .row-video{
