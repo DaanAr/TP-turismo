@@ -1,50 +1,52 @@
-//Menú mobile//
+const { createApp } = Vue 
 
-const menuBtn = document.querySelector('.menu-btn')
-const navLinks = document.querySelector ('.nav-links')
+let url='https://matias2189.pythonanywhere.com/productos'
+createApp({
+    data(){
+        return{
+            url:url,
+            products:[],
+            error:false,
+            cargando:true
 
-menuBtn.addEventListener('click', ()=> {
-    navLinks.classList.toggle('mobile-menu')
-})
-//SLIDER
+        }
+    },
+    methods:{
+        fetchData(url){
+            fetch(url)
+            .then(res=>res.json())
+            .then(data=>{
+                this.products=data
+                this.cargando=false
+                console.log(data)
+            })
+            .catch(err=>console.log(err))
+        },
+        eliminar(id) {
 
-// Acceso a las imágenes
-const slideImages = document.querySelectorAll('#images');
+            Toastify({
+                text: "Producto eliminado",
+                style: {
+                    background: "linear-gradient(to right,  #e92424,  #da5353)",
+                },
+                duration: 2000,
+                gravity: "bottom",
+                position: "right",
+            }).showToast();
 
-// Acceso a los botones del DOM
-const next = document.querySelector('.next');
-const prev = document.querySelector('.prev');
+            const url = 'https://matias2189.pythonanywhere.com/productos' + id;
+            var options = {
+                method: 'DELETE',
+            }
+            fetch(url, options)
+                .then(res => res.json()) 
+                .then(res => {
+                    location.reload();
+                })
+        }
+    },
+    created() {
+        this.fetchData(this.url)
+    },
 
-// Acceso a los indicadores del DOM
-const indicadores = document.querySelectorAll('.indicador');
-
-var contador = 0;
-
-// Código para los botones next y prev
-
-next.addEventListener('click', slideNext);
-prev.addEventListener('click', slidePrev);
-
-function slideNext() {
-  slideImages[contador].style.animation = 'next1 0.5s ease-in forwards';
-  indicadores[contador].classList.remove('active');
-  if (contador >= slideImages.length - 1) {
-    contador = 0;
-  } else {
-    contador++;
-  }
-  slideImages[contador].style.animation = 'next2 0.5s ease-in forwards';
-  indicadores[contador].classList.add('active');
-}
-
-function slidePrev() {
-  slideImages[contador].style.animation = 'prev1 0.5s ease-in forwards';
-  indicadores[contador].classList.remove('active');
-  if (contador <= 0) {
-    contador = slideImages.length - 1;
-  } else {
-    contador--;
-  }
-  slideImages[contador].style.animation = 'prev2 0.5s ease-in forwards';
-  indicadores[contador].classList.add('active');
-}
+}).mount('#app')
