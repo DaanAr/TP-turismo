@@ -26,9 +26,9 @@
                 <li class="btn-nav"><a href="index.html">Inicio</a></li>
                 <li class="btn-nav"><a href="dondeir.html">Dónde ir</a></li>
                 <li class="btn-nav"><a href="paquetes.html">Paquetes</a></li>
+                <li class="btn-nav"><a href="paquetes_admin.html">Panel Administrativo</a></li>
                 <li class="btn-nav"><a href="quehacer.html">Qué hacer</a></li>
                 <li class="btn-nav"><a href="nosotros.html">Sobre Nosotros</a></li>
-                <li class="btn-nav"><a href="admin.html">Panel Administrativo</a></li>
             </ul>
             <img src="../Icons/menu.png" class="menu-btn" alt="Menu">
         </nav>
@@ -44,8 +44,8 @@
         <div id="app" class="container">
             <h1>Productos</h1>
             <br>
-            <a class="btn btn-primary" href="producto_nuevo.html">Nuevo</a>
-            <br><br>
+            <br>
+            <br>
             <div v-if="error">
                 <p>Lo sentimos , ........</p>
             </div>
@@ -59,10 +59,9 @@
                         <div class="tarjeta"  v-for="producto in productos">
                             <img  :src="producto.imagen" :alt="producto.nombre">
                             <h2>{{producto.nombre}}</h2>
-                            <p>{{producto.precio}}</p>
-                            <p>{{producto.stock}}</p>
-                            <a class="btn btn-primary"  :href="'producto_update.html?id='+ producto.id" >Editar</a>
-                            <a type="button" class="btn btn-danger" v-on:click="eliminar(producto.id)" >Eliminar</a>
+                            <h3>Precio: {{producto.precio}}$</h3>
+                            <h4>Strock: {{producto.stock}}</h4>
+                            <a class="btn btn-success" href="">Comprar</a>
                         </div>
                     </div>    
                 </section>
