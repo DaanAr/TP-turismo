@@ -1,7 +1,7 @@
 console.log(location.search)     // lee los argumentos pasados a este formulario
 var id=location.search.substr(4)  // producto_update.html?id=1
 console.log(id)
-const { createApp } = Vue
+const {createApp} = Vue
   createApp({
     data() {
       return {
@@ -10,7 +10,7 @@ const { createApp } = Vue
         imagen:"",
         stock:0,
         precio:0,
-        url:'https://matias2189.pythonanywhere.com/productos',
+        url:'https://matias2189.pythonanywhere.com/productos/'+ id,
        }  
     },
     methods: {
