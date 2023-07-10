@@ -91,7 +91,7 @@ body{
 .pack{
     display: flex;
     justify-content: space-evenly;
-    
+    flex-wrap: wrap;
 }
 .tarjeta {
     background: rgb(42,170,196);
